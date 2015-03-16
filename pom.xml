@@ -10,12 +10,12 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <!-- Spring -->
-        <spring-framework.version>4.0.6.RELEASE</spring-framework.version>
+        <spring-framework.version>4.1.5.RELEASE</spring-framework.version>
         <!-- Libraries -->
         <log4j.version>1.2.17</log4j.version>
-        <guava.version>17.0</guava.version>
+        <guava.version>18.0</guava.version>
         <jaxb-api.version>2.2.11</jaxb-api.version>
-        <jackson-databind.version>2.4.1.1</jackson-databind.version>
+        <jackson-databind.version>2.5.1</jackson-databind.version>
         
     </properties>
 
@@ -67,7 +67,7 @@
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
             <version>1.2</version>
-            <scope>provided</scope>
+            <!-- <scope>provided</scope>  Provided: for GlassFish -->
         </dependency>
         
         <!-- For HTTP message converters -->
