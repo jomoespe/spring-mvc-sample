@@ -8,9 +8,9 @@
     </head>
     <body>
         <h2>Welcome, to the real world</h2>
-BTW, today is <fmt:formatDate value="${today}" pattern="yyyy-MM-dd" />.
-<p>
-    <a href="<c:url value="/" />">Home</a>
-</p>
+        BTW, today is <fmt:formatDate value="${today}" pattern="yyyy-MM-dd" />.
+        <p>
+            <a href="<c:url value="/" />">Home</a>
+        </p>
     </body>
 </html>

@@ -16,7 +16,7 @@ public class WelcomeController {
 
     @RequestMapping(value = "/", method = GET)
     public String home() {
-        return "home";
+        return "index";
     }
 
     @RequestMapping(value = "/welcome", method = GET)

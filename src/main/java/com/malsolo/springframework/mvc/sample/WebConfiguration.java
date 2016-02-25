@@ -1,12 +1,12 @@
 package com.malsolo.springframework.mvc.sample;
 
 import com.malsolo.springframework.mvc.sample.web.WelcomeController;
+
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigUtils;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.mock.web.MockServletContext;
 import org.springframework.web.context.support.StaticWebApplicationContext;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
@@ -25,8 +25,7 @@ public class WebConfiguration extends WebMvcConfigurerAdapter {
 
     @Bean
     public ViewResolver viewResolver() {
-        InternalResourceViewResolver resolver
-                = new InternalResourceViewResolver();
+        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
         resolver.setPrefix("/WEB-INF/views/");
         resolver.setSuffix(".jsp");
         resolver.setExposeContextBeansAsAttributes(true);
@@ -47,7 +46,6 @@ public class WebConfiguration extends WebMvcConfigurerAdapter {
 
     private static ConfigurableApplicationContext createContext() {
         StaticWebApplicationContext context = new StaticWebApplicationContext();
-        context.setServletContext(new MockServletContext());
         AnnotationConfigUtils.registerAnnotationConfigProcessors(context);
         context.refresh();
         context.registerShutdownHook();
